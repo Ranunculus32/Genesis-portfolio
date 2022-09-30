@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
+
 <body>
+    <div id="wrapper"> 
     <header>
         <div class="main-nav topnav">
             <div class="logo">
-                <p>Genesis</p>
+               <img src="imgs/Logo.svg" alt="Genesis logo">
             </div>
-            <div class="projects">
-                <nav><ul><li>Projects</li></ul></nav>
-            </div>
-            <div class="contact">
-                <nav><ul><li>Contact</li></ul></nav>
+            <div class="nav-items">
+                <nav><ul class="nav-items">
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li></ul>
+                </nav>
             </div>
         </div>
     </header>
-    <p> Shooting Stars</p>
-    <div class="intro">
-        <p>Hello, I&#180;m Bakhtiyar Sattarov,
-            product designer with experience
+<main>
+    
+    <div class="stars"><p class="highlight"> Shooting Stars</p></div>
+    <div class="greeting">
+        <div>
+        <h2>Hello, I&#180;m Bakhtiyar Sattarov,
+            <span class="highlight">product designer</span> with experience
             in studios and startups.
-        </p>
-        <p> Design is about progress</p>
-    <div class="grid-pictures">
+        </h2>
+        </div>
+        <div>
+        <p class="fade"> Design is about progress</p>
+        </div>
+    </div>
+    <div class="grid-pictures-mainwrapper">
+        <div class="grid-pictures"></div>
         <div class="a">
             <img src="imgs/Rectangle-1.png" alt="Woman dancing in a box">
         </div>
@@ -55,16 +65,16 @@
             <img src="imgs/Rectangle-8.png" alt="Woman walking on top of a sandy dune with beautiful sunset">
         </div>
         <div class="i">
-            <img src="imgs/Rectangle-9.png" alt="A man closing his eyes, one palm resting on his face and flowers sprouting vertically accross his face">
+            <img src="imgs/Rectangle-9.png" alt="A man closing his eyes, his palm resting on his face and flowers sprouting vertically accross his face">
         </div>
         <div class="j">
             <img src="imgs/Rectangle-10.png" alt="A man with paint splattered on his face having a graffitti background">
         </div>
-        <div class="l">
-            <img src="imgs/Rectangle-11.png" alt="A boy swinging on an piano's keyboard">
+        <div class="k">
+            <img src="imgs/Rectangle-12.png" alt="A boy swinging on an piano's keyboard">
         </div>
-        <div class="m">
-            <img src="imgs/Rectangle-12.png" alt="Inverted mountain leaning to the right with a woman on top which looks like on a liff">
+        <div class="l">
+            <img src="imgs/Rectangle-13.png" alt="Inverted mountain leaning to the right with a woman on top which looks like on a liff">
         </div>
     </div>
     <div class="midnav">
@@ -73,71 +83,73 @@
         </div>
         <div class="midnav_first">
             <nav><ul>
-                <li><a href="#">Multimedia</a></li>
-                <li><a href="#">Interactive Design</a></li>
-                <li><a href="#">Branding</a></li>
+                <li><a class="fade" href="#">Multimedia</a></li>
+                <li><a class="fade" href="#">Interactive Design</a></li>
+                <li><a class="fade" href="#">Branding</a></li>
             </ul></nav>
         </div>
         <div class="midnav_second">
             <nav><ul>
-                <li><a href="#">Creative design</a></li>
-                <li><a href="#">Packaging</a></li>
-                <li><a href="#">Coding</a></li>
+                <li><a class="fade" href="#">Creative design</a></li>
+                <li><a class="fade" href="#">Packaging</a></li>
+                <li><a class="fade" href="#">Coding</a></li>
             </ul></nav>
         </div>
     </div>
     <div class="awwwards-container">
         <div class="awwwards">
             <div class="title-first">Awwwards</div>
-            <div>
-                <p><b>Site of the day</b></p>
-            </div>
+            <div><p><b>Site of the day</b></p></div>
             <div>
                 <p><b>Genesis UI Kit</b><span> 2018</span></p>
-                <p> Application that helps to find nearest sport centres
+                <p class="fade"> Application that helps to find nearest sport centres
                     in your area</p>
             </div>   
         </div>
         <div class="awwwards2">
             <div><p><b>Best navigation</b></p></div>
             <p><b>Genesis Template</b><span>2018</span></p>
-            <p>Application that helps to find nearest sport centres
+            <p class="fade">Application that helps to find nearest sport centres
                 in your area</p>    
         </div>
         <div class="design-container">
             <div><p><b>Site of the day</b></p></div>
             <div><p><b>Genesis UI Kit</b>
                 <span>2017</span></p>
-                <p>Application that helps to find nearest sport centres
+                <p class="fade">Application that helps to find nearest sport centres
                     in your area</p>
             </div>
+        </div>
         
         <div class="DesignAwards2">
             <div><p><b>Best navigation</b></p></div>
             <div><p><b>Genesis Template</b>
                 <span></span>2016</p>
-             <p> Application that helps to find nearest sport centres
+             <p class="fade"> Application that helps to find nearest sport centres
                     in your area</p>
             </div>
         </div>
+</main>
 <footer>
-    <div class="main-nav bottom-nav">
+    <div class="main-nav bottomnav">
         <div class="logo">
-            <p>Genesis</p>
+           <img src="imgs/Logo.svg" alt="Genesis logo">
         </div>
-        <div class="projects">
-            <nav><ul><li>Projects</li></ul></nav>
+        <div >
+            <nav><ul class="nav-items">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li></ul>
+            </nav>
         </div>
-        <div class="contact">
-            <nav><ul><li>Contact</li></ul></nav>
-        </div>
+    </div>
         <div class="icons">
             <a href="#"><img src="imgs/Shape.png" alt="Dribble"></a>
-            <a href="#"><img src="imgs/Shape-2.png" alt="Instagram"></a>
+            <a href="#"><img src="imgs/instagram.png" alt="Instagram"></a>
             <a href="#"><img src="imgs/Path.png" alt="Twitter"></a>
         </div>
     </div>
 
 </footer>
+</div>
 </body>
 </html>
