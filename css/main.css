@@ -6,6 +6,9 @@ body {
   font-family: "Mulish";
   color: rgb(17, 17, 17);
 }
+body h1 {
+  font-size: 40px;
+}
 body .fade {
   font-weight: 400;
   font-size: 16px;
@@ -314,27 +317,6 @@ header {
   justify-self: end;
 }
 
-/*
-section .midnav {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    .text {
-        height: 100%;
-        width: 50%;
-    }
-    .midnav_first {
-    display: flex;
-    width: 20%;
-    height: 100%;
-    }
-    .midnav_second {
-    display: flex;
-    width: 20%;
-    height: 100%;
-
-    }
-}*/
 footer {
   margin-top: 150px;
   left: 0;
