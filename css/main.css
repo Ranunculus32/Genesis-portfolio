@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   max-width: 90vw;
-  margin: 0;
+  margin: auto;
   padding: 20px;
   font-family: "Mulish";
   color: rgb(17, 17, 17);
@@ -34,16 +34,11 @@ body a:link:hover {
   font-weight: 500;
   color: white;
   background-color: #f67280;
-  border: 2px;
-  border-radius: 1px;
+  border: 1px;
 }
 
 header {
   background-color: white;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   height: 80px;
   padding: 0 5%;
 }
@@ -54,13 +49,10 @@ header {
   height: 100%;
   font-size: 16px;
   display: flex;
-  padding: 2em;
 }
-.main-nav .nav-list {
+.main-nav .links {
   float: right;
-  padding: 0;
-  margin: 0;
-  width: 30%;
+  max-width: 50%;
   height: 100%;
   display: flex;
   justify-content: end;
@@ -71,7 +63,6 @@ header {
   display: flex;
   padding: 0;
   margin: 0;
-  width: 70%;
   height: 100%;
 }
 .main-nav ul a {
@@ -81,9 +72,16 @@ header {
   font-weight: bold;
   color: black;
 }
+.main-nav ul .icons {
+  display: flex;
+  justify-content: flex-end;
+  align-content: space-between;
+  max-width: 20%;
+  height: 100%;
+}
 
 .greeting {
-  margin-top: 200px;
+  margin: 100px 50px 0 50px;
   padding-left: 0;
   display: flex;
   flex-direction: row;
@@ -107,18 +105,15 @@ header {
 }
 
 .grid-pictures {
-  margin-top: 100px;
+  margin: 100px 50px 0 50px;
   width: 90vw;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat 32, 5vw;
 }
 .grid-pictures img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 90%;
+  height: auto;
 }
 .grid-pictures .a {
   grid-column-start: 1;
@@ -199,11 +194,12 @@ header {
 }
 
 .midnav_container {
-  margin-top: 100px;
+  margin: 100px 50px 0 50px;
   width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: auto;
 }
 .midnav_container .midnav_text {
   height: 100%;
@@ -227,13 +223,14 @@ header {
 }
 
 .awards_container {
-  margin-top: 100px;
+  margin: 100px 50px 0 50px;
   width: 90vw;
   display: grid;
   align-items: baseline;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat 8, 20vw;
   grid-gap: 20px;
+  overflow: auto;
 }
 .awards_container .title-first {
   grid-column-start: 1;
@@ -325,11 +322,8 @@ header {
 }
 
 footer {
-  margin-top: 100px;
-  left: 0;
-  right: 0;
+  margin-top: 50px;
   height: 80px;
-  padding: 0;
 }
 footer .bottomnav a {
   display: flex;
@@ -340,12 +334,11 @@ footer .sm-icon {
 
 /**Page2**/
 .project_title {
-  margin-top: 200px;
-  padding-left: 0;
-  padding-right: 0;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .project_title .project_left_wrapper {
   display: flex;
@@ -354,33 +347,78 @@ footer .sm-icon {
   height: 100%;
 }
 .project_title .table {
+  min-width: 100px;
   display: flex;
-  max-width: 30%;
-  height: 100%;
   justify-self: flex-end;
-  align-self: flex-end;
   border-spacing: 10px 0;
   text-align: center;
+  margin: 25px o;
+}
+.project_title .table tr {
+  text-align: center;
+  -webkit-text-decoration: underline solid #979797;
+          text-decoration: underline solid #979797;
+}
+@media screen and (max-width: 600px) {
+  .project_title {
+    float: none;
+    display: block;
+    width: 100%;
+  }
 }
 
-.figure_container {
-  margin-top: 100px;
-  height: 100%;
-  max-width: 100%;
-  img-height: 100%;
-  img-max-width: 100%;
+.project-img-container {
+  margin: 100px auto;
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
-.figure_container p {
+.project-img-container .img-container {
+  width: 100w;
+  height: 100vh;
+}
+.project-img-container .img-container img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-img-container p {
   max-width: 100%;
 }
 
 .gallery {
-  margin-top: 100px;
-  display: flex;
+  margin: 100px 50px 0 50px;
+  width: 90vw;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat 4, 5vw;
+}
+.gallery img {
+  width: 100%;
   height: 100%;
-  max-width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery .img1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1;
+  grid-row-end: 4;
+}
+.gallery .img2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row: 1;
+  grid-row-end: 4;
+}
+.gallery .img3 {
+  grid-column-start: 9;
+  grid-column-end: 12;
+  grid-row: 1;
+  grid-row-end: 4;
 }
 @media screen and (max-width: 600px) {
   .gallery {
@@ -388,4 +426,69 @@ footer .sm-icon {
     display: block;
     width: 100%;
   }
+}
+
+/**
+.gallery {
+    margin-top:100px;
+    display: flex;
+    height: 100vh;
+    max-width: 90vw;
+    padding: 0 5%;
+    flex-direction: row;
+    justify-content: space-between; 
+
+   @media screen and (max-width: 600px) {
+      float: none;
+      display: block;
+      width: 100%;
+    }
+} ****/
+/***Contact page****/
+.contact_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.contact_container .left-wrapper {
+  width: 50%;
+  height: 100%;
+}
+.contact_container .form-container {
+  width: 35%;
+}
+.contact_container .form-container .form-box {
+  margin: auto auto;
+}
+.contact_container .form-container .form-box input {
+  float: right;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+}
+.contact_container .form-container .form-box input :hover {
+  cursor: pointer;
+}
+.contact_container .form-container .form-box input label {
+  float: left;
+}
+.contact_container .form-container .form-box textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 10px;
+}
+.contact_container .form-container .form-box button {
+  background: #4A4FF2;
+  color: white;
+  border: 3px;
+  padding: 10px;
+}
+.contact_container .form-container .form-box button:hover {
+  background-color: #f67280;
 }/*# sourceMappingURL=main.css.map */
