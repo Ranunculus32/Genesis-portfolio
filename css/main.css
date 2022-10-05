@@ -72,13 +72,6 @@ header {
   font-weight: bold;
   color: black;
 }
-.main-nav ul .icons {
-  display: flex;
-  justify-content: flex-end;
-  align-content: space-between;
-  max-width: 20%;
-  height: 100%;
-}
 
 .greeting {
   margin: 100px 50px 0 50px;
@@ -184,8 +177,8 @@ header {
 .grid-pictures .l {
   grid-column-start: 7;
   grid-column-end: 10;
-  grid-row: 27;
-  grid-row-end: 33;
+  grid-row: 24;
+  grid-row-end: 32;
 }
 @media only screen and (max-width: 768px) {
   .grid-pictures .grid-pictures {
@@ -223,6 +216,8 @@ header {
 }
 
 .awards_container {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
   margin: 100px 50px 0 50px;
   width: 90vw;
   display: grid;
@@ -328,9 +323,6 @@ footer {
 footer .bottomnav a {
   display: flex;
 }
-footer .sm-icon {
-  align-self: end;
-}
 
 /**Page2**/
 .project_title {
@@ -338,7 +330,7 @@ footer .sm-icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: stretch;
 }
 .project_title .project_left_wrapper {
   display: flex;
@@ -346,18 +338,8 @@ footer .sm-icon {
   max-width: 65%;
   height: 100%;
 }
-.project_title .table {
-  min-width: 100px;
-  display: flex;
-  justify-self: flex-end;
-  border-spacing: 10px 0;
+.project_title .table-container tr {
   text-align: center;
-  margin: 25px o;
-}
-.project_title .table tr {
-  text-align: center;
-  -webkit-text-decoration: underline solid #979797;
-          text-decoration: underline solid #979797;
 }
 @media screen and (max-width: 600px) {
   .project_title {
@@ -367,34 +349,44 @@ footer .sm-icon {
   }
 }
 
-.project-img-container {
-  margin: 100px auto;
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
   height: 100vh;
   max-width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.project-img-container .img-container {
-  width: 100w;
-  height: 100vh;
+figure .project-img-container {
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
-.project-img-container .img-container img {
-  width: 100%;
+figure .project-img-container img {
+  width: 90%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.project-img-container p {
+figure .project-img-container p {
   max-width: 100%;
 }
 
 .gallery {
-  margin: 100px 50px 0 50px;
   width: 90vw;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat 4, 5vw;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
 }
 .gallery img {
   width: 100%;
@@ -404,21 +396,21 @@ footer .sm-icon {
 }
 .gallery .img1 {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 2;
   grid-row: 1;
-  grid-row-end: 4;
+  grid-row-end: 2;
 }
 .gallery .img2 {
-  grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row: 1;
-  grid-row-end: 4;
+  grid-row-end: 2;
 }
 .gallery .img3 {
-  grid-column-start: 9;
-  grid-column-end: 12;
+  grid-column-start: 3;
+  grid-column-end: 4;
   grid-row: 1;
-  grid-row-end: 4;
+  grid-row-end: 2;
 }
 @media screen and (max-width: 600px) {
   .gallery {
@@ -428,27 +420,12 @@ footer .sm-icon {
   }
 }
 
-/**
-.gallery {
-    margin-top:100px;
-    display: flex;
-    height: 100vh;
-    max-width: 90vw;
-    padding: 0 5%;
-    flex-direction: row;
-    justify-content: space-between; 
-
-   @media screen and (max-width: 600px) {
-      float: none;
-      display: block;
-      width: 100%;
-    }
-} ****/
 /***Contact page****/
 .contact_container {
-  display: flex;
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .contact_container .left-wrapper {
   width: 50%;
@@ -464,10 +441,10 @@ footer .sm-icon {
   float: right;
   margin-bottom: 10px;
   width: 100%;
-  border: 0;
+  border: none;
   outline: 0;
   background: transparent;
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.3);
 }
 .contact_container .form-container .form-box input :hover {
   cursor: pointer;
@@ -491,4 +468,13 @@ footer .sm-icon {
 }
 .contact_container .form-container .form-box button:hover {
   background-color: #f67280;
+}
+
+.map-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.map-container img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
