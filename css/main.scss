@@ -1,9 +1,12 @@
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     height: 100vh;
     max-width: 90vw; 
-    margin: auto;
-    padding: 20px;
     font-family: 'Mulish';
     color: rgb(17, 17, 17);
     h1 {
@@ -347,12 +350,16 @@ footer {
 
 
 /**Page2**/
-
+.project-page-wrapper {
+    justify-content: center;
+    padding: 1rem;
+    margin: auto;
+}
 .project_title {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
    
     .project_left_wrapper {
@@ -387,16 +394,20 @@ figure {
     
     .project-img-container {
         display: flex;
-        max-width: 100%;
+        height: 80vh;
+        max-width: 90vw;
         margin: auto;
         justify-content: center;
         align-items: center; 
         overflow: hidden;
         box-sizing: border-box;
         flex-wrap: wrap;
+       
             img {
                 width: 90%;
                 height: auto;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         p {    
@@ -408,10 +419,13 @@ figure {
     
     width: 90vw;
     display:grid;
-    column-gap: 2em;
+    justify-content: center;
+    grid-gap: 1rem;
+    margin:auto;
+   
     grid-template-columns: repeat(3, 1fr);
     img {
-        width: 100%;
+        width: 90%;
         height: 100%;
         object-fit: cover;
     }
@@ -443,11 +457,12 @@ figure {
 .contact_container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
     .left-wrapper {
         width: 50%;
         height: 100%;
+
     }
     .form-container {
         width: 35%;
@@ -491,10 +506,35 @@ figure {
     }
 }
 .map-container {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    img {
-        width: 100%;
-        height: auto;
+    width: 80vw;
+    height: 50vh;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom:50%;
+    position:relative;
+    height: 0;  
+    display: flex;
+    justify-content: center;
+
+    iframe {
+        position: relative;
+    }
+
+
+}
+@media (max-width: 600px) and (max-width:800px)  {
+    iframe {
+      width: 400px;
+      height: 230px;
+    }
+    .left-wrapper h1 {
+       font-size: 3vw;
+    }
+}
+@media (max-width: 950px) {
+    iframe {
+      width: 500px;
+      height: 320px;
+      transition: smooth;
     }
 }

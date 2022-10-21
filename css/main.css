@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
   max-width: 90vw;
-  margin: auto;
-  padding: 20px;
   font-family: "Mulish";
   color: rgb(17, 17, 17);
 }
@@ -325,11 +329,18 @@ footer .bottomnav a {
 }
 
 /**Page2**/
+.project-page-wrapper {
+  justify-content: center;
+  padding: 1rem;
+  margin: auto;
+}
+
 .project_title {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
 }
 .project_title .project_left_wrapper {
@@ -363,17 +374,16 @@ figure {
 }
 figure .project-img-container {
   display: flex;
-  max-width: 100%;
+  height: 80vh;
+  max-width: 90vw;
   margin: auto;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 }
 figure .project-img-container img {
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -384,12 +394,10 @@ figure .project-img-container p {
 .gallery {
   width: 90vw;
   display: grid;
-  -moz-column-gap: 2em;
-       column-gap: 2em;
   grid-template-columns: repeat(3, 1fr);
 }
 .gallery img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -425,6 +433,7 @@ figure .project-img-container p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
 }
 .contact_container .left-wrapper {
@@ -471,10 +480,33 @@ figure .project-img-container p {
 }
 
 .map-container {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 80vw;
+  height: 50vh;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 50%;
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: center;
 }
-.map-container img {
-  width: 100%;
-  height: auto;
+.map-container iframe {
+  position: relative;
+}
+
+@media (max-width: 600px) and (max-width: 800px) {
+  iframe {
+    width: 400px;
+    height: 230px;
+  }
+  .left-wrapper h1 {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 950px) {
+  iframe {
+    width: 500px;
+    height: 320px;
+    transition: smooth;
+  }
 }/*# sourceMappingURL=main.css.map */
