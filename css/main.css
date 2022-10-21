@@ -394,6 +394,9 @@ figure .project-img-container p {
 .gallery {
   width: 90vw;
   display: grid;
+  justify-content: center;
+  grid-gap: 1rem;
+  margin: auto;
   grid-template-columns: repeat(3, 1fr);
 }
 .gallery img {
